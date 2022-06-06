@@ -6,18 +6,25 @@
 		$("#tabs").tabs();
 	});
 
-	$(window).scroll(function () {
-		var scroll = $(window).scrollTop();
-		var box = $('.header-text').height();
-		var header = $('header').height();
+	//javascript for navigation bar effect on scroll
+	window.addEventListener("scroll", function () {
+		var header = document.querySelector("header");
+		header.classList.toggle('down', window.scrollY > 0);
 
-		if (scroll >= box - header) {
-			$("header").addClass("background-header");
-		} else {
-			$("header").removeClass("background-header");
-		}
 	});
 
+	//javascript for responsive navigation sidebar menu
+	var menu = document.querySelector('.menu');
+	var menuBtn = document.querySelector('.menu-btn');
+	var closeBtn = document.querySelector('.close-btn');
+
+	menuBtn.addEventListener("click", () => {
+		menu.classList.add('active');
+	});
+
+	closeBtn.addEventListener("click", () => {
+		menu.classList.remove('active');
+	});
 
 	$('.schedule-filter li').on('click', function () {
 		var tsfilter = $(this).data('tsfilter');
@@ -121,57 +128,57 @@
 		});
 	}
 
+	// Javacript for video slider navigation
+	const btns = document.querySelectorAll(".nav-btn");
+	const slides = document.querySelectorAll(".video-slide");
+	const contents = document.querySelectorAll(".content");
 
+	var sliderNav = function (manual) {
+		btns.forEach((btn) => {
+			btn.classList.remove("active");
+		});
+		slides.forEach((slide) => {
+			slide.classList.remove("active");
+		});
+		contents.forEach((content) => {
+			content.classList.remove("active");
+		});
+
+		btns[manual].classList.add("active");
+		slides[manual].classList.add("active");
+		contents[manual].classList.add("active");
+	}
+	btns.forEach((btn, i) => {
+		btn.addEventListener("click", () => {
+			sliderNav(i);
+		});
+	});
+
+	// Javascript for split-screen images comparation
+	document.addEventListener('DOMContentLoaded', function () {
+		var parent = document.querySelector('.splitview'),
+			topPanel = parent.querySelector('.top'),
+			handle = parent.querySelector('.handle'),
+			skewHack = 0,
+			delta = 0;
+
+		// If the parent has .skewed class, set the skewHack var.
+		if (parent.className.indexOf('skewed') != -1) {
+			skewHack = 1000;
+		}
+
+		parent.addEventListener('mousemove', function (event) {
+			// Get the delta between the mouse position and center point.
+			delta = (event.clientX - window.innerWidth / 2) * 0.5;
+
+			// Move the handle.
+			handle.style.left = event.clientX + delta + 'px';
+
+			// Adjust the top panel width.
+			topPanel.style.width = event.clientX + skewHack + delta + 'px';
+		});
+	});
 })(window.jQuery);
 
-// Javacript for video slider navigation
-const btns = document.querySelectorAll(".nav-btn");
-const slides = document.querySelectorAll(".video-slide");
-const contents = document.querySelectorAll(".content");
 
-var sliderNav = function (manual) {
-	btns.forEach((btn) => {
-		btn.classList.remove("active");
-	});
-	slides.forEach((slide) => {
-		slide.classList.remove("active");
-	});
-	contents.forEach((content) => {
-		content.classList.remove("active");
-	});
-
-	btns[manual].classList.add("active");
-	slides[manual].classList.add("active");
-	contents[manual].classList.add("active");
-}
-btns.forEach((btn, i) => {
-	btn.addEventListener("click", () => {
-		sliderNav(i);
-	});
-});
-
-// Javascript for split-screen images comparation
-document.addEventListener('DOMContentLoaded', function () {
-	var parent = document.querySelector('.splitview'),
-		topPanel = parent.querySelector('.top'),
-		handle = parent.querySelector('.handle'),
-		skewHack = 0,
-		delta = 0;
-
-	// If the parent has .skewed class, set the skewHack var.
-	if (parent.className.indexOf('skewed') != -1) {
-		skewHack = 1000;
-	}
-
-	parent.addEventListener('mousemove', function (event) {
-		// Get the delta between the mouse position and center point.
-		delta = (event.clientX - window.innerWidth / 2) * 0.5;
-
-		// Move the handle.
-		handle.style.left = event.clientX + delta + 'px';
-
-		// Adjust the top panel width.
-		topPanel.style.width = event.clientX + skewHack + delta + 'px';
-	});
-});
 
