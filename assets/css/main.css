@@ -512,8 +512,18 @@ banner
   transition-property: clip-path;
 }
 
-@media (max-width: 1040px) {}
+@media (max-width: 1040px) {
+  #home-sec{
+    padding: 100px 20px;
+  }
+}
+@media (max-width: 560px){
 
+  .home .content h1{
+    font-size: 3em;
+    line-height: 60px;
+  }
+}
 /*
 ---------------------------------------------
 features
@@ -581,7 +591,6 @@ subscribe
   background-repeat: no-repeat;
   background-size: cover;
   /* */
-  text-align: center;
 }
 
 .cta-content h2 {
@@ -635,8 +644,8 @@ body {
 }
 
 .content img {
-  width: 550px;
-  height: 300px;
+  width: 620px;
+  height: 320px;
 }
 
 #circuitos .content p{
@@ -740,9 +749,9 @@ body {
     font-size: 80%;
   }
 
-  #section circuitos img {
-    width: 100%;
-    height: auto;
+  #circuitos img {
+    width: 90%;
+    height: 80%;
   }
 }
 
