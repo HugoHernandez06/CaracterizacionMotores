@@ -294,13 +294,13 @@ header .brand {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
-  
+
 }
 
 header .brand img {
   width: 120px;
   height: 40px;
-  border-radius:5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 header .menu {
@@ -513,17 +513,19 @@ banner
 }
 
 @media (max-width: 1040px) {
-  #home-sec{
+  #home-sec {
     padding: 100px 20px;
   }
 }
-@media (max-width: 560px){
 
-  .home .content h1{
+@media (max-width: 560px) {
+
+  .home .content h1 {
     font-size: 3em;
     line-height: 60px;
   }
 }
+
 /*
 ---------------------------------------------
 features
@@ -582,34 +584,24 @@ subscribe
 ---------------------------------------------
 */
 
-#call-to-action {
-  padding: 150px 0px;
-  background-image: url(../images/metro.jpg);
-  /*Parallax*/
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* */
+#bound-one {
+  background: #d0d8db;
 }
-
-.cta-content h2 {
-  font-size: 36px;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #fff;
-  letter-spacing: 1px;
+.scroll-bound {
+  height: 500vh;
 }
-
-.cta-content h2 em {
-  font-style: normal;
-  color: #08a045;
+.scroll-bound .content {
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.cta-content p {
-  font-size: 16px;
-  color: #fff;
-  margin: 15px 0px 25px 0px;
+.scroll-bound video {
+  width: 100%;
 }
 
 /*
@@ -648,10 +640,12 @@ body {
   height: 320px;
 }
 
-#circuitos .content p{
+#circuitos .content p {
   color: #fff;
 }
-.content h1,h2{
+
+.content h1,
+h2 {
   color: #FFF;
 }
 
@@ -992,34 +986,42 @@ schedule
 trainers
 --------------------------------------------- 
 */
-.slide-container{
+#trainers{
+  padding: 100px;
+}
+.slide-container {
   max-width: 1120px;
   width: 100%;
   padding: 40px 0;
 }
-.slide-content{
+
+.slide-content {
   padding: 24px;
   margin: 0 40px;
   overflow: hidden;
   border-radius: 25px;
 }
-.card{
+
+.card {
   border-radius: 25px;
   background-color: #FFF;
 }
+
 .image-content,
-.card-content{
+.card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px 14px;
 }
-.image-content{
+
+.image-content {
   position: relative;
   row-gap: 5px;
   padding: 25px 0;
 }
-.overlay{
+
+.overlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -1029,11 +1031,12 @@ trainers
   border-radius: 25px 25px 0 25px;
 }
 
-.overlay::after{
+.overlay::after {
   border-radius: 0 25px 0 0;
   background-color: #FFF;
 }
-.card-image{
+
+.card-image {
   position: relative;
   height: 150px;
   width: 150px;
@@ -1041,25 +1044,29 @@ trainers
   background: #FFF;
   padding: 3px;
 }
-.card-image .card-img{
+
+.card-image .card-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid #08a045;
 }
-.name{
+
+.name {
   font-size: 18px;
   font-weight: 500;
   color: #333;
   text-align: center;
 }
-.description{
+
+.description {
   font-size: 14px;
   color: #707070;
   text-align: center;
 }
-.button{
+
+.button {
   border: none;
   font-size: 16px;
   color: #FFF;
@@ -1070,44 +1077,53 @@ trainers
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button:hover{
+
+.button:hover {
   background: #08a045;
 }
 
-.swiper-navBtn{
+.swiper-navBtn {
   color: #08a045;
 }
-.swiper-navBtn:hover{
+
+.swiper-navBtn:hover {
   color: #08a045;
 }
-.swiper-navBtn::after{
+
+.swiper-navBtn::after {
   color: #08a045;
 }
+
 .swiper-navBtn::before,
-.swiper-navBtn::after{
+.swiper-navBtn::after {
   font-size: 35px;
 }
-.swiper-button-next{
+
+.swiper-button-next {
   padding-left: 10px;
   right: 0;
 }
-.swiper-button-prev{
+
+.swiper-button-prev {
   padding-right: 10px;
   left: 0;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
   background-color: #08a045;
   opacity: 1;
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet-active {
   background-color: #08a045;
 }
 
 @media screen and (max-width: 768px) {
-  .slide-content{
+  .slide-content {
     margin: 0 10px;
   }
-  .swiper-navBtn{
+
+  .swiper-navBtn {
     display: none;
   }
 }
@@ -1136,8 +1152,6 @@ footer p a {
 footer p a:hover {
   color: #ffffff;
 }
-
-
 
 /* 
 ---------------------------------------------
