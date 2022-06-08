@@ -987,7 +987,7 @@ trainers
 --------------------------------------------- 
 */
 #trainers{
-  padding: 100px;
+  padding-top: 20px;
 }
 .slide-container {
   max-width: 1120px;
