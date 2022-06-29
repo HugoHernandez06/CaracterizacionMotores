@@ -220,7 +220,7 @@ var swiper = new Swiper(".slide-content", {
 			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
 			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
 			
-			video.currentTime = video.duration * percentScrolled;
+				video.currentTime = video.duration * percentScrolled;
 		}
 		requestAnimationFrame(scrollVideo);
 	}

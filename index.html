@@ -29,7 +29,7 @@ https://templatemo.com/tm-548-training-studio
 <body>
 
     <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
+    <!--<div id="js-preloader" class="js-preloader">
         <div class="preloader-inner">
             <span class="dot"></span>
             <div class="dots">
@@ -38,10 +38,8 @@ https://templatemo.com/tm-548-training-studio
                 <span></span>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- ***** Preloader End ***** -->
-
-
 
     <!-- ***** Header Area Start ***** -->
     <header>
@@ -133,17 +131,26 @@ https://templatemo.com/tm-548-training-studio
                     <div class="section-heading dark-bg">
                         <h2>Características <em>Físicas</em></h2>
                         <img src="" alt="">
-                        <p>Ambos motores son de inducción; el de 1ra generación (DC) con conexión serie, mientras que el
-                            de 3ra generación (AC) es de Jaula de ardilla, el cual consta de una serie de barras
-                            conductoras dispuestas dentro de ranuras y cortocircuitadas en alguno de sus extremos.
+                        <p>El motor de 1ra generación (DC) es una máquina de conmutador con conexión serie (devanado del
+                            rotor conectado en serie con devanado estatórico), mientras que los motores de 2da y 3ra
+                            generación corresponden a máquinas de inducción (AC) con rotor de Jaula de ardilla, el cual
+                            consta de una serie de barras conductoras dispuestas dentro de ranuras y cortocircuitadas en
+                            alguno de sus extremos.
                             <br><br>
                             El motor de DC cuenta con unas escobillas con material conductor que permiten la circulación
                             de corriente a través del rotor, las cuales requieren mantenimiento constante debido al
-                            desgaste producido por la fricción. Esto es una desventaja si se compara con el motor de AC
-                            que no cuenta con estos elementos para su funcionamiento.
+                            desgaste producido por la fricción, además de limpieza por el polvillo generado por el
+                            desgaste de estas. A medida que se desgastan las delgas y las escobillas, la conmutación
+                            genera arcos eléctricos que aceleran la degradación del conjunto colector. Esto representa
+                            una desventaja si se compara con el motor de AC que no requiere estos elementos para su
+                            funcionamiento, en la medida que la transferencia de energía al rotor se da por inducción,
+                            sin escobillas.
                             <br><br>
-                            Otra desventaja es la diferencia en peso y tamaño de ambos motores, por lo que el esfuerzo
-                            mecánico y eléctrico del motor de DC es mayor al del motor de corriente alterna.
+                            Otra ventaja del motor de AC con respecto a los motores de DC, que se evidencia en la
+                            actualización tecnológica y en la segunda generación de trenes, es la mayor densidad
+                            gravimétrica de potencia la cual se traduce en motores más livianos para una misma potencia
+                            de salida, reduciendo el peso del sistema de tracción.
+
                         </p>
                     </div>
                 </div>
@@ -294,13 +301,14 @@ https://templatemo.com/tm-548-training-studio
                     <div class="section-heading">
                         <h2>Comparación <em>Velocidad</em></h2>
                         <img src="assets/images/logo.png" alt="">
-                        <p>El motor de DC (1ra generación) trabaja a una velocidad de 1800 RPM, dado que cuenta con
-                            cuatro polos y trabaja a una frecuencia de 60 Hz.
+                        <p>El motor de DC (1ra generación) trabaja a una velocidad de 1800 rpm, tiene cuatro polos y un
+                            devanado de compensación encargado de anular el campo magnético producido por una corriente
+                            inducida, evitando así el desgaste del colector por pequeños arcos eléctricos.
                             <br><br>
-                            Por otro lado, el motor de AC también cuenta con cuatro trabaja a una velocidad teórica de
-                            1800 RPM, pero en condiciones normales presenta un deslizamiento de 0.01888, en el cual
-                            opera con la potencia nominal, esto hace que el motor trabaje finalmente a una velocidad de
-                            1766 RPM aproximadamente.
+                            Por otro lado, el motor de AC también cuenta con cuatro polos, lo que implica que el campo
+                            magnético tiene una velocidad de 1800 rpm a 60 Hz para operar con deslizamiento nominal de
+                            1,9 %, entregando su potencia nominal. Por lo tanto, la velocidad a esta potencia (sin
+                            control) es de aproximadamente 1766 rpm.
                         </p>
                     </div>
                 </div>
@@ -332,8 +340,9 @@ https://templatemo.com/tm-548-training-studio
                     <div class="section-heading">
                         <h2>Corriente y <em>Par</em></h2>
                         <img src="" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor,
-                            ultricies fermentum massa consequat eu.</p>
+                        <p>Par: A partir de la información obtenida de los ensayos de laboratorio del motor de
+                            inducción, es posible construir la característica par-velocidad sin convertidor (curva azul)
+                            y usando el convertidor (curva amarilla). </p>
                     </div>
                 </div>
             </div>
@@ -354,11 +363,10 @@ https://templatemo.com/tm-548-training-studio
                         <article id='tabs-1'>
                             <img src="assets/images/curva_torque_60.PNG" alt="Second Training">
                             <h4>Curva Torque 60 Hz</h4>
-                            <p>Para lograr un funcionamiento optimo con el motor de AC se puede emplear un control que
+                            <p>Para lograr un funcionamiento óptimo con el motor de AC se puede emplear un control que
                                 mantenga el torque en un valor fijo cercano al punto de operación nominal. Esto evita el
                                 desgaste innecesario de la máquina si no se requiere un torque elevado y mantiene
                                 regulados los parámetros del motor.</p>
-
                         </article>
                         <article id='tabs-2'>
                             <img src="assets/images/curva_torque_AC_DC.PNG" alt="Third Class">
@@ -366,12 +374,11 @@ https://templatemo.com/tm-548-training-studio
                             <p>En la gráfica se observan las curvas de torque contra velocidad del motor de AC y el de
                                 DC. Para el segundo motor, se tienen curvas teóricas con distintos voltajes de
                                 alimentación que interceptan en diferentes velocidades a la curva del motor de AC. Esto
-                                permite identificar los valores de tensión que son alcanzados con un control de voltaje
-                                (Chopper) en los que el motor de primera generación funciona de forma similar al motor
-                                de tercera.
+                                permite identificar los valores de tensión que son alcanzados con un control de
+                                corriente (Chopper) para que el motor de DC genere un torque equivalente al de AC.
                                 <br>
                                 Se evidencia que el motor de DC requiere mayores voltajes de alimentación para alcanzar
-                                valores de torque similares al del motor de AC en operación nominal
+                                valores de torque similares al del motor de AC en operación nominal.
                             </p>
 
                         </article>
@@ -429,10 +436,18 @@ https://templatemo.com/tm-548-training-studio
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading dark-bg">
-                        <h2>Por <em>Definir</em></h2>
+                        <h2><em>Eficiencia</em></h2>
                         <img src="assets/images/logo.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor,
-                            ultricies fermentum massa consequat eu.</p>
+                        <p>Teniendo en cuenta que la eficiencia del motor de DC es de 94.68% y la del motor de AC es de
+                            94.99%, no se aprecia una diferencia significativa para determinar, en este aspecto, que un
+                            motor es mejor que otro.
+                            <br><br>
+                            Con todo esto, el motor de tercera generación supera en gran medida al de primera generación
+                            en aspectos como lo son el peso, el tamaño, y su capacidad de tener mayor torque con menor
+                            valor de voltaje de alimentación. Dichas ventajas permiten trenes más livianos, con mayor
+                            aprovechamiento del espacio de ubicación de los motores y con la facultad de alcanzar
+                            mayores velocidades en un menor tiempo.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -512,7 +527,7 @@ https://templatemo.com/tm-548-training-studio
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <!--<img src="images/profile4.jpg" alt="" class="card-img">-->
+                                <img src="assets/images/participantes/Jose.PNG" alt="" class="card-img">
                             </div>
                         </div>
 
@@ -528,7 +543,7 @@ https://templatemo.com/tm-548-training-studio
                             <span class="overlay"></span>
 
                             <div class="card-image">
-                                <!--<img src="images/profile5.jpg" alt="" class="card-img">-->
+                                <!--<img src="assets/images/participantes/" alt="" class="card-img">-->
                             </div>
                         </div>
 
@@ -604,7 +619,7 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-lg-12">
                     <p>Copyright &copy; 2022 Caracterización Motores Metro
                         - Designed using <a rel="nofollow" href="https://templatemo.com" class="tm-text-link"
-                            target="_parent">TemplateMo</a><br>
+                            target="_blank">TemplateMo</a><br>
                     </p>
                 </div>
             </div>

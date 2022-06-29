@@ -585,10 +585,11 @@ subscribe
 */
 
 #bound-one {
-  background: #d0d8db;
+  background: red;
 }
 .scroll-bound {
   height: 500vh;
+  background: yellow;
 }
 .scroll-bound .content {
   height: 100vh;
@@ -602,8 +603,17 @@ subscribe
 }
 .scroll-bound video {
   width: 100%;
+  height: auto;
+  
 }
 
+@media (max-width: 1068px) {
+
+  .scroll-bound{height: 100vh;}
+  .scroll-bound{width: 100%;}
+  .scroll-bound{background-color: orangered;}
+  .scroll-bound video{width: 100%; height: auto;}
+}
 /*
 --------------------------------------------
 Split Screen - Images Comparation
@@ -636,8 +646,8 @@ body {
 }
 
 .content img {
-  width: 620px;
-  height: 320px;
+  width: 650px;
+  height: 300px;
 }
 
 #circuitos .content p {
@@ -758,7 +768,9 @@ Our Classes
 #our-classes {
   margin-bottom: 140px;
 }
-
+#our-classes p {
+  text-align: justify;
+}
 #tabs ul {
   margin: 0;
   padding: 0;
@@ -842,10 +854,7 @@ Our Classes
   margin: auto;
 }
 
-.tabs-content:hover img {
-  width: 1000px;
-  height: 600px;
-}
+
 
 .tabs-content h4 {
   font-size: 23px;
