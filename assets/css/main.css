@@ -583,37 +583,35 @@ features
 subscribe
 ---------------------------------------------
 */
-
-#bound-one {
-  background: red;
+#videoScroll{
+  line-height:0;
 }
-.scroll-bound {
-  height: 500vh;
-  background: yellow;
-}
-.scroll-bound .content {
-  height: 100vh;
+.bg-3 {
+  height: 100%;
   width: 100%;
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-.scroll-bound video {
+
+.parallax-in {
+  opacity: 1;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-parallax {
   width: 100%;
-  height: auto;
-  
+  height: 100%;
+  display: block;
+  display: inline-block;
 }
 
-@media (max-width: 1068px) {
-
-  .scroll-bound{height: 100vh;}
-  .scroll-bound{width: 100%;}
-  .scroll-bound{background-color: orangered;}
-  .scroll-bound video{width: 100%; height: auto;}
+@media only screen and (max-device-width: 1068px) {
+  .parallax-in {
+    background-attachment: scroll;
+  }
 }
+
 /*
 --------------------------------------------
 Split Screen - Images Comparation
@@ -768,9 +766,11 @@ Our Classes
 #our-classes {
   margin-bottom: 140px;
 }
+
 #our-classes p {
   text-align: justify;
 }
+
 #tabs ul {
   margin: 0;
   padding: 0;
@@ -995,9 +995,10 @@ schedule
 trainers
 --------------------------------------------- 
 */
-#trainers{
+#trainers {
   padding-top: 20px;
 }
+
 .slide-container {
   max-width: 1120px;
   width: 100%;

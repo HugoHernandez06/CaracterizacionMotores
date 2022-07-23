@@ -182,54 +182,32 @@
 
 // Javascript por the Own Team
 var swiper = new Swiper(".slide-content", {
-    slidesPerView: 3,
-    spaceBetween: 25,
-    loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+	slidesPerView: 3,
+	spaceBetween: 25,
+	loop: true,
+	centerSlide: 'true',
+	fade: 'true',
+	grabCursor: 'true',
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		dynamicBullets: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
 
-    breakpoints:{
-        0: {
-            slidesPerView: 1,
-        },
-        520: {
-            slidesPerView: 2,
-        },
-        950: {
-            slidesPerView: 3,
-        },
-    },
-  });
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		520: {
+			slidesPerView: 2,
+		},
+		950: {
+			slidesPerView: 3,
+		},
+	},
+});
 
-  const registerVideo = (bound, video) => {
-	bound = document.querySelector(bound);
-	video = document.querySelector(video);
-	const scrollVideo = ()=>{
-		if(video.duration) {
-			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
-			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
-			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
-			
-				video.currentTime = video.duration * percentScrolled;
-		}
-		requestAnimationFrame(scrollVideo);
-	}
-	requestAnimationFrame(scrollVideo);
-}
-
-
-registerVideo("#bound-one", "#bound-one video");
-registerVideo("#bound-two", "#bound-two video");
-registerVideo("#bound-three", "#bound-three video");
-registerVideo("#bound-four", "#bound-four video");
-registerVideo("#bound-five", "#bound-five video");
