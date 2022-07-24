@@ -171,9 +171,9 @@ ul {
 }
 
 p {
-  font-size: 14px;
+  font-size: 17px;
   line-height: 25px;
-  color: #7a7a7a;
+  color: #424242;
 }
 
 /* 
@@ -275,6 +275,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  height: 60px !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -329,8 +330,8 @@ header .menu a {
   font-weight: 500;
   text-decoration: none;
   margin: 0 30px;
-  padding: 7px 12px;
-  border-radius: 20px;
+  padding: 0px 0px;
+  border-radius: 25px;
   transition: 0.3s;
   transition-property: color, background;
 }
@@ -351,7 +352,7 @@ header .btn {
   display: none;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1335px) {
 
   header,
   header.down {
@@ -468,6 +469,17 @@ banner
   display: none;
 }
 
+.home:before{
+  z-index: 7;
+  content: '';
+  position: absolute;
+  background: rgba(0, 119, 182, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .slider-navigation {
   z-index: 888;
   position: relative;
@@ -578,6 +590,173 @@ features
   text-align: justify;
 }
 
+
+/*
+---------------------------------------------
+velocidad
+---------------------------------------------
+*/
+#velocidad {
+  margin-bottom: 80px;
+}
+
+#velocidad img {
+  display: block;
+  margin: auto;
+}
+
+.velocidad-item {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+
+.velocidad-item .left-icon img {
+  float: left;
+  margin-right: 30px;
+}
+
+.velocidad-item .right-content {
+  display: inline;
+}
+
+.velocidad-item .right-content h4 {
+  margin-top: 0px;
+  margin-bottom: 7px;
+  letter-spacing: 0.25px;
+  color: #232d39;
+  font-size: 19px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.velocidad-item .right-content a.text-button {
+  margin-top: 7px;
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #08a045;
+  font-weight: 500;
+}
+
+#velocidad p {
+  text-align: justify;
+}
+
+/*
+---------------------------------------------
+eficiencia
+---------------------------------------------
+*/
+#eficiencia {
+  padding: 0px 0px 140px 0px;
+  background-color: #000000;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#eficiencia p {
+  text-align: justify;
+}
+
+#eficiencia table {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+#eficiencia table tbody {
+  border-top: 1px solid #fff;
+}
+
+#eficiencia table tbody tr {
+  border-bottom: 1px solid #fff;
+}
+
+#eficiencia table tbody tr td {
+  border-right: 1px solid #fff;
+  height: 100px;
+}
+
+#eficiencia table tr td {
+  color: #fff;
+  font-size: 13px;
+  text-transform: none;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+
+.eficiencia-table.filtering .ts-item {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.eficiencia-table.filtering .ts-item.show {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+#eficiencia .filters {
+  margin-bottom: 40px;
+}
+
+#eficiencia .filters ul {
+  padding: 0;
+  text-align: center;
+}
+
+#eficiencia .filters ul li {
+  list-style: none;
+  display: inline;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#eficiencia .filters ul li:after {
+  content: "/";
+  margin-left: 10px;
+  color: #fff;
+}
+
+#eficiencia .filters ul li:last-child {
+  margin-right: 0px;
+}
+
+#eficiencia .filters ul li:last-child::after {
+  display: none;
+}
+
+#eficiencia .filters ul li.active,
+#eficiencia .filters ul li:hover {
+  color: #08a045;
+}
+
+#eficiencia .filters-content {
+  margin-top: 50px;
+}
+
+#eficiencia .filters-content .show {
+  opacity: 1;
+  visibility: visible;
+  transition: all 350ms;
+}
+
+#eficiencia .filters-content .hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms;
+}
+
 /*
 ---------------------------------------------
 subscribe
@@ -644,17 +823,24 @@ body {
 }
 
 .content img {
-  width: 650px;
+  width: 610px !important;
   height: 300px;
 }
 
 #circuitos .content p {
   color: #fff;
+  font-size: 15px !important;
 }
 
-.content h1,
-h2 {
+.content h1{
   color: #FFF;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.content h2{
+  color: #FFF;
+  font-size: 25px;
 }
 
 .panel .content {
@@ -752,8 +938,8 @@ h2 {
   }
 
   #circuitos img {
-    width: 90%;
-    height: 80%;
+    width: 85%;
+    height: 75%;
   }
 }
 
@@ -763,12 +949,13 @@ Our Classes
 --------------------------------------------
 */
 
-#our-classes {
+#corrientePar {
   margin-bottom: 140px;
 }
 
-#our-classes p {
+#corrientePar p {
   text-align: justify;
+  font-size: 17px;
 }
 
 #tabs ul {
@@ -912,7 +1099,7 @@ schedule
 
 #schedule table tr td {
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   text-transform: none;
   font-weight: 500;
   letter-spacing: 0.25px;
@@ -1285,7 +1472,7 @@ responsive
     margin-bottom: 30px;
   }
 
-  #our-classes .tabs-content {
+  #corrientePar .tabs-content {
     margin-left: 0px;
     margin-top: 30px;
   }
