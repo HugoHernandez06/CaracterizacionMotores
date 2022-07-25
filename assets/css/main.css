@@ -171,7 +171,7 @@ ul {
 }
 
 p {
-  font-size: 17px;
+  font-size: 17px !important;
   line-height: 25px;
   color: #424242;
 }
@@ -759,7 +759,7 @@ eficiencia
 
 /*
 ---------------------------------------------
-subscribe
+videos
 ---------------------------------------------
 */
 #videoScroll{
@@ -793,7 +793,7 @@ subscribe
 
 /*
 --------------------------------------------
-Split Screen - Images Comparation
+Images Comparation
 --------------------------------------------
 */
 /* Reset. */
@@ -938,8 +938,8 @@ body {
   }
 
   #circuitos img {
-    width: 85%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
   }
 }
 
