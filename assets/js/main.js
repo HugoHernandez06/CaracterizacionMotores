@@ -26,15 +26,15 @@
 		menu.classList.remove('active');
 	});
 
-	$('.schedule-filter li').on('click', function () {
+	$('.caracteristicas-filter li').on('click', function () {
 		var tsfilter = $(this).data('tsfilter');
-		$('.schedule-filter li').removeClass('active');
+		$('.caracteristicas-filter li').removeClass('active');
 		$(this).addClass('active');
 		if (tsfilter == 'all') {
-			$('.schedule-table').removeClass('filtering');
+			$('.caracteristicas-table').removeClass('filtering');
 			$('.ts-item').removeClass('show');
 		} else {
-			$('.schedule-table').addClass('filtering');
+			$('.caracteristicas-table').addClass('filtering');
 		}
 		$('.ts-item').each(function () {
 			$(this).removeClass('show');

@@ -14,7 +14,7 @@ Table of contents
 03. global styles
 04. header
 05. banner
-06. features
+06. inicio
 07. testimonials
 08. contact
 09. footer
@@ -540,15 +540,15 @@ banner
 
 /*
 ---------------------------------------------
-features
+inicio
 ---------------------------------------------
 */
 
-#features {
+#inicio {
   margin-bottom: 80px;
 }
 
-#features img {
+#inicio img {
   display: block;
   margin: auto;
 }
@@ -586,7 +586,7 @@ features
   font-weight: 500;
 }
 
-#features p {
+#inicio p {
   text-align: justify;
 }
 
@@ -793,7 +793,7 @@ videos
 
 /*
 --------------------------------------------
-Images Comparation
+Circuitos
 --------------------------------------------
 */
 /* Reset. */
@@ -881,9 +881,6 @@ body {
   background-color: #000000;
   z-index: 2;
   width: 50vw;
-
-  /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
-  clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
 }
 
 .top .description {
@@ -938,14 +935,14 @@ body {
   }
 
   #circuitos img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
   }
 }
 
 /*
 --------------------------------------------
-Our Classes
+Corriente Par
 --------------------------------------------
 */
 
@@ -1062,11 +1059,11 @@ Our Classes
 
 /* 
 ---------------------------------------------
-schedule
+caracteristicas
 --------------------------------------------- 
 */
 
-#schedule {
+#caracteristicas {
   padding: 0px 0px 140px 0px;
   background-color: #000000;
   background-position: center center;
@@ -1074,30 +1071,30 @@ schedule
   background-size: cover;
 }
 
-#schedule p {
+#caracteristicas p {
   text-align: justify;
 }
 
-#schedule table {
+#caracteristicas table {
   width: 100%;
   text-align: center;
   border: 1px solid #fff;
 }
 
-#schedule table tbody {
+#caracteristicas table tbody {
   border-top: 1px solid #fff;
 }
 
-#schedule table tbody tr {
+#caracteristicas table tbody tr {
   border-bottom: 1px solid #fff;
 }
 
-#schedule table tbody tr td {
+#caracteristicas table tbody tr td {
   border-right: 1px solid #fff;
   height: 100px;
 }
 
-#schedule table tr td {
+#caracteristicas table tr td {
   color: #fff;
   font-size: 15px;
   text-transform: none;
@@ -1105,26 +1102,26 @@ schedule
   letter-spacing: 0.25px;
 }
 
-.schedule-table.filtering .ts-item {
+.caracteristicas-table.filtering .ts-item {
   opacity: 0;
   transition: all 0.5s;
 }
 
-.schedule-table.filtering .ts-item.show {
+.caracteristicas-table.filtering .ts-item.show {
   opacity: 1;
   transition: all 0.5s;
 }
 
-#schedule .filters {
+#caracteristicas .filters {
   margin-bottom: 40px;
 }
 
-#schedule .filters ul {
+#caracteristicas .filters ul {
   padding: 0;
   text-align: center;
 }
 
-#schedule .filters ul li {
+#caracteristicas .filters ul li {
   list-style: none;
   display: inline;
   cursor: pointer;
@@ -1141,36 +1138,36 @@ schedule
   transition: all 0.3s ease-in-out;
 }
 
-#schedule .filters ul li:after {
+#caracteristicas .filters ul li:after {
   content: "/";
   margin-left: 10px;
   color: #fff;
 }
 
-#schedule .filters ul li:last-child {
+#caracteristicas .filters ul li:last-child {
   margin-right: 0px;
 }
 
-#schedule .filters ul li:last-child::after {
+#caracteristicas .filters ul li:last-child::after {
   display: none;
 }
 
-#schedule .filters ul li.active,
-#schedule .filters ul li:hover {
+#caracteristicas .filters ul li.active,
+#caracteristicas .filters ul li:hover {
   color: #08a045;
 }
 
-#schedule .filters-content {
+#caracteristicas .filters-content {
   margin-top: 50px;
 }
 
-#schedule .filters-content .show {
+#caracteristicas .filters-content .show {
   opacity: 1;
   visibility: visible;
   transition: all 350ms;
 }
 
-#schedule .filters-content .hide {
+#caracteristicas .filters-content .hide {
   opacity: 0;
   visibility: hidden;
   transition: all 350ms;
@@ -1179,10 +1176,10 @@ schedule
 
 /* 
 ---------------------------------------------
-trainers
+equipo
 --------------------------------------------- 
 */
-#trainers {
+#equipo {
   padding-top: 20px;
 }
 
@@ -1464,11 +1461,11 @@ responsive
     font-size: 64px;
   }
 
-  #features {
+  #inicio {
     margin-bottom: 110px;
   }
 
-  #features .feature-item {
+  #inicio .feature-item {
     margin-bottom: 30px;
   }
 

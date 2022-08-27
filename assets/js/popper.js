@@ -53,12 +53,12 @@ function microtaskDebounce(fn) {
 }
 
 function taskDebounce(fn) {
-  var scheduled = false;
+  var caracteristicasd = false;
   return function () {
-    if (!scheduled) {
-      scheduled = true;
+    if (!caracteristicasd) {
+      caracteristicasd = true;
       setTimeout(function () {
-        scheduled = false;
+        caracteristicasd = false;
         fn();
       }, timeoutDuration);
     }
@@ -844,7 +844,7 @@ function runModifiers(modifiers, data, ends) {
 /**
  * Updates the position of the popper, computing the new offsets and applying
  * the new style.<br />
- * Prefer `scheduleUpdate` over `update` because of performance reasons.
+ * Prefer `caracteristicasUpdate` over `update` because of performance reasons.
  * @method
  * @memberof Popper
  */
@@ -1002,7 +1002,7 @@ function setupEventListeners(reference, options, state, updateBound) {
  */
 function enableEventListeners() {
   if (!this.state.eventsEnabled) {
-    this.state = setupEventListeners(this.reference, this.options, this.state, this.scheduleUpdate);
+    this.state = setupEventListeners(this.reference, this.options, this.state, this.caracteristicasUpdate);
   }
 }
 
@@ -1038,7 +1038,7 @@ function removeEventListeners(reference, state) {
  */
 function disableEventListeners() {
   if (this.state.eventsEnabled) {
-    cancelAnimationFrame(this.scheduleUpdate);
+    cancelAnimationFrame(this.caracteristicasUpdate);
     this.state = removeEventListeners(this.reference, this.state);
   }
 }
@@ -2301,7 +2301,7 @@ var Popper = function () {
     var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
     classCallCheck(this, Popper);
 
-    this.scheduleUpdate = function () {
+    this.caracteristicasUpdate = function () {
       return requestAnimationFrame(_this.update);
     };
 
@@ -2387,8 +2387,8 @@ var Popper = function () {
     }
 
     /**
-     * Schedule an update, it will run on the next UI update available
-     * @method scheduleUpdate
+     * caracteristicas an update, it will run on the next UI update available
+     * @method caracteristicasUpdate
      * @memberof Popper
      */
 
